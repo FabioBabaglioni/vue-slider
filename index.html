@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img v-for = "(poster, index) in slides" :src="poster.image[index]" alt="Spiderman" />
+                    <img :src="slides[activeItem].image" :alt="`poster di` + slides[activeItem].title" />
                     <div class="text">
                         <h3>{{slides.title}}</h3>
                         <p>
