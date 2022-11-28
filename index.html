@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[activeItem].image" :alt="`poster di` + slides[activeItem].title" />
+                    <img :src="slides[activeItem].image" :alt="`poster di` + slides[activeItem].title"/>
                     <div class="text">
                         <h3>{{slides[activeItem].title}}</h3>
                         <p>
@@ -28,8 +28,8 @@
 
                 <!-- genero automaticamente le 5 immagini per la thumbs -->
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div  @click = prevImage class="prev"></div>
+                    <div @click = nextImage class="next"></div>
                     <div class="thumb" 
                     v-for = "(poster, index) in slides"
                     :class="activeItem === index ? `active` : ``">
