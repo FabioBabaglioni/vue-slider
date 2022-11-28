@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <img v-for = "(poster, index) in slides" :src="poster.image[index]" alt="Spiderman" />
                     <div class="text">
                         <h3>{{slides.title}}</h3>
                         <p>
@@ -33,8 +33,7 @@
                 <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
-                    <div 
-                    class="thumb" 
+                    <div class="thumb" 
                     v-for = "(poster, index) in slides"
                     :class="activeItem === index ? `active` : ``">
                         <img  :src="poster.image" alt="poster.title" />
