@@ -17,9 +17,16 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
+                    
+                    <!-- richiamo l'oggetto dell'array utilizzando activeItem e poi mi richiamo  (image) -->
                     <img :src="slides[activeItem].image" :alt="`poster di` + slides[activeItem].title"/>
+
+                    
                     <div class="text">
+                        <!-- richiamo il titolo (title) -->
                         <h3>{{slides[activeItem].title}}</h3>
+
+                        <!-- richiamo il paragrafo testo (text) -->
                         <p>
                            {{slides[activeItem].text}}
                         </p>
